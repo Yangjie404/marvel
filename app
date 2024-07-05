@@ -7,25 +7,10 @@ Created on Wed Jul  3 19:34:07 2024
 
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
-from scipy.stats import pearsonr
-from scipy import sqrt
-from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 from sklearn.model_selection import train_test_split #划分训练集测试集
-from sklearn.preprocessing import MinMaxScaler#数据标准化
-from scipy.stats import ttest_ind
-from sklearn.model_selection import LeaveOneOut, GridSearchCV#交叉验证
-from sklearn.preprocessing import normalize
-from sklearn import linear_model
-from sklearn.linear_model import LassoCV, Lasso
 
 from sklearn.linear_model import LogisticRegression#逻辑回归模型
-from sklearn import metrics
-from sklearn.metrics import classification_report
-from sklearn.metrics import confusion_matrix
-from sklearn.metrics import confusion_matrix, plot_confusion_matrix, plot_roc_curve
-from sklearn.metrics import roc_curve, auc, roc_auc_score
+
 #导入数据
 csv_data = pd.read_csv(r'D:\Radiomics\marvel1.csv') # 读取data1.csv
 all_data = csv_data[["sex", "age", "af","glucose","NIHSS","ASPECTS","ASITN","OCCT","TOAST"]]
@@ -100,7 +85,6 @@ if st.button("Submit"):
     f"<p style='font-size: 40px;'>Based on feature values,predicted probability of favorable outcome is {prediction}!</p>",
     unsafe_allow_html=True,
     )
-
 
 
 
