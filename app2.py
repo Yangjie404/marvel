@@ -14,7 +14,7 @@ import streamlit as st
 
 
 #导入数据
-csv_data = pd.read_csv(r'D:\Radiomics\radiomics\MARVEL.csv') # 读取data1.csv
+csv_data = pd.read_csv('https://raw.githubusercontent.com/Yangjie404/marvel/refs/heads/main/MARVEL.csv') # 读取data1.csv
 all_data = csv_data[["sex", "age", "af","glucose","NIHSS","ASPECTS","ASITN","OCCT","TOAST"]]
 all_data["sex"] = all_data["sex"].replace(["Male", "Female"], [1, 0])
 all_data["af"] = all_data["af"].replace(["yes", "no"], [1, 0])
